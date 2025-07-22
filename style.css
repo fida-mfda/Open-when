@@ -2,11 +2,12 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background: #fff0f5;
   text-align: center;
-  padding: 50px;
+  padding: 40px 20px;
+  margin: 0;
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 2.2em;
   margin-bottom: 30px;
   color: #b03a6a;
 }
@@ -43,7 +44,7 @@ button:hover {
   border: 2px solid #ff69b4;
   padding: 30px;
   border-radius: 15px;
-  width: 80%;
+  width: 90%;
   max-width: 500px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   z-index: 100;
@@ -60,4 +61,19 @@ button:hover {
   font-size: 24px;
   cursor: pointer;
   color: #888;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  button {
+    font-size: 0.95em;
+    padding: 12px;
+  }
+
+  .letter-box {
+    padding: 20px;
+  }
 }
