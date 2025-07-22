@@ -1,28 +1,38 @@
 const letters = {
-  sad: `
-    <h2>Hey, love.</h2>
-    <p>I know you're feeling sad right now, and I wish I could just hold you close.</p>
-    <p>Remember, it's okay to not be okay. You're strong, and I believe in you.</p>
-    <p>I’m just a message away. I love you always. 💖</p>
+  sedih: `
+    <h2>Sayangku...</h2>
+    <p>Kalau kamu lagi sedih, peluk virtual dulu dari aku 🤗</p>
+    <p>Aku selalu di sini buat kamu. Kamu kuat, kamu hebat. Aku sayang kamu. 💖</p>
   `,
-  happy: `
-    <h2>Yayy! You're Happy! 🎉</h2>
-    <p>Seeing you happy is my favorite thing in the world.</p>
-    <p>Celebrate every little moment, you deserve it all.</p>
-    <p>Keep smiling, love. You shine the brightest when you’re happy! 😊</p>
+  senang: `
+    <h2>Yeayy kamu senang!</h2>
+    <p>Kalau kamu bahagia, aku jauh lebih bahagia 😄</p>
+    <p>Rayakan setiap momen kecil. Kamu layak dapetin semuanya 💫</p>
   `,
-  missing: `
-    <h2>Missing me?</h2>
-    <p>I miss you too, more than words can say.</p>
-    <p>But remember, distance means so little when someone means so much.</p>
-    <p>We'll be together soon. Until then, feel my hug from this page. 🤗</p>
+  rindu: `
+    <h2>Kamu kangen yaa?</h2>
+    <p>Aku juga kangen banget sama kamu 😔</p>
+    <p>Sabar yaa, nanti kita ketemu lagi. Peluk jauh dari sini 🤍</p>
   `,
-  birthday: `
-    <h2>Happy Birthday, My Love! 🎂</h2>
-    <p>This day is extra special because you were born.</p>
-    <p>Thank you for being you. Thank you for letting me love you.</p>
-    <p>I hope this year brings you happiness, growth, and dreams coming true!</p>
-    <p>I’m so proud of you. 💝</p>
+  ulangtahun: `
+    <h2>Selamat ulang tahun, cintaku! 🎉</h2>
+    <p>Hari ini spesial banget karena kamu lahir 💝</p>
+    <p>Terima kasih sudah ada, jadi diri kamu, dan bikin aku bahagia.</p>
+  `,
+  butuhsemangat: `
+    <h2>Semangat sayangku!</h2>
+    <p>Apapun yang kamu hadapi, kamu pasti bisa!</p>
+    <p>Aku percaya banget sama kamu 💪✨</p>
+  `,
+  bingung: `
+    <h2>Kalau kamu bingung...</h2>
+    <p>Coba tarik napas pelan-pelan. Nggak apa-apa mikir pelan-pelan.</p>
+    <p>Kamu nggak sendiri kok, aku di sini.</p>
+  `,
+  gabut: `
+    <h2>Lagi gabut yaa?</h2>
+    <p>Yuk nonton film lucu, atau dengerin lagu favorit kita 🎵</p>
+    <p>Atau kamu bisa baca lagi surat-surat ini 😆</p>
   `
 };
 
@@ -31,6 +41,13 @@ function openLetter(type) {
   const content = document.getElementById('letterContent');
   content.innerHTML = letters[type];
   box.classList.remove('hidden');
+
+  // 🎉 Confetti saat buka surat
+  confetti({
+    particleCount: 100,
+    spread: 70,
+    origin: { y: 0.6 }
+  });
 }
 
 function closeLetter() {
