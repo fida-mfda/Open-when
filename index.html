@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open When... Letters</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Open When...</h1>
+  <div class="container">
+    <button onclick="openLetter('sad')">You're feeling sad 😢</button>
+    <button onclick="openLetter('happy')">You're really happy 😊</button>
+    <button onclick="openLetter('missing')">You miss me 🥺</button>
+    <button onclick="openLetter('birthday')">It's your birthday 🎂</button>
+  </div>
+
+  <div id="letterBox" class="letter-box hidden">
+    <span class="close-btn" onclick="closeLetter()">×</span>
+    <div id="letterContent"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
